@@ -3,18 +3,443 @@
 {% block title %}Hello AccueilController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/brut/src/Controller/AccueilController.php'|file_link(0) }}">src/Controller/AccueilController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/brut/templates/accueil/index.html.twig'|file_link(0) }}">templates/accueil/index.html.twig</a></code></li>
+<header class="bg-white shadow">
+    <div class="mx-auto max-w-8xl px-4 py-6 sm:px-6 lg:px-8 flex flex-nowrap">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Brut.</h1>
+        <div class="absolute right-0 flex flex-nowrap">
+            <div class="flex lg:ml-6">
+                <a href="#" class="p-2 text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Search</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                </a>
+            </div>
+            <button type="button"
+                class="inline-flex items-center rounded-xl bg-black px-3 py-2 text-md font-semibold text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                Télécharger l'app
+            </button>
+        </div>
+    </div>
+</header>
+<nav class="text-black  w-full z-20 top-0 left-0 border-b border-gray-200 border-t bg-white">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <a href="https://flowbite.com/" class="flex items-center">
+  </a>
+  <div class="flex md:order-2">
+   
+  </div>
+  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border text-black rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  ">
+      <li>
+        <a href="#" class="block py-2 pl-3 pr-4 text-black rounded  md:p-0 " aria-current="page">Home</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded  md:p-0 ">About</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded  md:p-0 ">Services</a>
+      </li>
+      <li>
+        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded  md:p-0 ">Contact</a>
+      </li>
     </ul>
+  </div>
+  </div>
+</nav>
+
+
+    <div class="relative mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+        <a class="media-thumbnail-wrapper col-sm-4 col-lg-3"
+            href="https://www.brut.media/fr/economy/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville-39a9eda2-0df5-48d4-a7cb-2a86f02f8e83">
+            <div class="media-thumbnail-card category-media-thumbnail-card" data-testid="media-thumbnail-card">
+                <div class="thumbnail category-media-thumbnail-card ">
+                    <img class=" h-auto max-w-lg mx-auto rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                    <div class="absolute bottom-0 right-0 bg-white p-4">3:00</div>
+                </div>
+            </div>
+        </a>
+        <div class="mt-16 mr-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:gap-y-16 lg:gap-x-8">
+            <h2 class="text-2xl font-bold text-red-600"> Vidéo à la une</h2>
+                <h1 class="text-3xl font-bold text-black "> Elle a créé une appli de livraison de repas dans sa petite ville <h1>
+            <p>
+                Uber Eats, Deliveroo… Ces services ne sont pas toujours disponibles à la campagne. Alors à Albert dans la
+                Somme, Chloé s'est associée avec les commerçants locaux et a lancé sa propre application de livraison de
+                repas. On a passé une journée avec elle. 👉 Ce reportage est réalisé par des étudiants en journalisme de
+                l'ESJ Lille, accompagnés par Brut.
+            <button type="button"
+                class="inline-flex items-center rounded-xl bg-black px-3 py-2 text-md font-semibold text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                Découvrir la vidéo
+            </button>
+                </p>
+         </div>
+        </div>
+    </div>
+    
+    <div class="container">
+    <div class="carousel">
+     <h2 class="text-3xl font-bold tracking-tight text-gray-900">Les docs de Brut.</h2>
+  <div class="carousel__items">
+  <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+    <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+    <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
 </div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Vidéos les plus vues</h2>
+  <div class="carousel__items">
+   <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+    <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+    <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+<div class="my-auto">
+
+    <a href="#" class="flex flex-col items-center bg-white border border-black rounded-lg shadow md:flex-row md:max-w-xl ">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-3xl font-bold tracking-tight text-black">Tout Brut dans une app</h5>
+            <p class="mb-3 text-sm font-normal text-black">Fil d'actualité sur mesure, lives exclusifs avec nos journalistes, podcasts et docs originaux.</p>
+            <button type="button"
+                    class="inline-flex items-center rounded-xl bg-black px-3 py-2 text-md font-semibold text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+                    Je découvre
+                </button>
+        </div>
+        <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg" alt="">
+    </a>
+    </div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Sexualité(s)</h2>
+  <div class="carousel__items">
+   <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+    <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+    <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Explorations</h2>
+  <div class="carousel__items">
+   <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Rap 🎤</h2>
+  <div class="carousel__items">
+   <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Une vie</h2>
+  <div class="carousel__items">
+  <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Comment ça marche ?</h2>
+  <div class="carousel__items">
+   <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Urgence climatique 🌍</h2>
+  <div class="carousel__items">
+    <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Bien être animal 🦦</h2>
+  <div class="carousel__items">
+  <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+<div class="carousel">
+ <h2 class="text-3xl font-bold tracking-tight text-gray-900">Écoutez nos podcasts</h2>
+  <div class="carousel__items">
+    <div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div><div class="flex flex-wrap">
+    <img class="h-auto max-w-xs rounded-xl"
+                        src="https://img.brut.media/w350/thumbnail/elle-a-cree-une-appli-de-livraison-de-repas-dans-sa-petite-ville39a9eda2-0df5-48d4-a7cb-2a86f02f8e83.image_3-16fbf6bb-a547-436b-9dd8-47c2dccf2e05-portrait.jpg"
+                        alt="Your Company">
+                        test
+    </div>
+  </div>
+  <button type="button" class="carousel__arrow--prev absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>  
+      <button type="button" class="carousel__arrow--next absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+</div>
+
 {% endblock %}
