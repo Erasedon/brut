@@ -10,6 +10,7 @@ module.exports = {
       padding: '2rem',
     },
     extend: {
+      width:{'39rem':'39rem'},
       colors: {
         'dark': '#243c5a',
       },

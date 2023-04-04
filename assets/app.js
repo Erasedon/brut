@@ -52,18 +52,24 @@ class Carousel {
   let divp = document.querySelector('.p-1');
   let logonav = document.querySelector('.logonav');
   let svg = document.querySelector('.svg');
+  let search = document.querySelector('.search');
+  let base = document.querySelector('.bases');
   let navHeight = nav.offsetHeight;
   
   function NavbarSticky(scrollPosition) {
     if (scrollPosition >= navHeight) {
       nav.classList.add('fixed');
       svg.classList.replace('svg','hidden');
+      search.classList.replace('hidden','search');
+      base.classList.replace('text-base','text-lg');
       logonav.classList.replace('hidden','logonav');
       divp.classList.replace('p-1','p-3');
       
     } else {
       svg.classList.replace('hidden','svg');
       logonav.classList.replace('logonav','hidden');
+      search.classList.replace('search','hidden');
+      base.classList.replace('text-lg','text-base');
       nav.classList.remove('fixed');
       divp.classList.replace('p-3','p-1');
     }
