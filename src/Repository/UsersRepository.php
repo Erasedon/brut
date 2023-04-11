@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\Admin;
+use App\Entity\Users;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
@@ -10,21 +10,21 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\PasswordUpgraderInterface;
 
 /**
- * @extends ServiceEntityRepository<Admin>
+ * @extends ServiceEntityRepository<Users>
  *
- * @method Admin|null find($id, $lockMode = null, $lockVersion = null)
- * @method Admin|null findOneBy(array $criteria, array $orderBy = null)
- * @method Admin[]    findAll()
- * @method Admin[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Users|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Users|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Users[]    findAll()
+ * @method Users[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AdminRepository extends ServiceEntityRepository implements PasswordUpgraderInterface
+class UsersRepository extends ServiceEntityRepository implements PasswordUpgraderInterface
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Admin::class);
+        parent::__construct($registry, Users::class);
     }
 
-    public function save(Admin $entity, bool $flush = false): void
+    public function save(Users $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -33,7 +33,7 @@ class AdminRepository extends ServiceEntityRepository implements PasswordUpgrade
         }
     }
 
-    public function remove(Admin $entity, bool $flush = false): void
+    public function remove(Users $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -47,7 +47,7 @@ class AdminRepository extends ServiceEntityRepository implements PasswordUpgrade
      */
     public function upgradePassword(PasswordAuthenticatedUserInterface $user, string $newHashedPassword): void
     {
-        if (!$user instanceof Admin) {
+        if (!$user instanceof Users) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', \get_class($user)));
         }
 
@@ -57,7 +57,7 @@ class AdminRepository extends ServiceEntityRepository implements PasswordUpgrade
     }
 
 //    /**
-//     * @return Admin[] Returns an array of Admin objects
+//     * @return Users[] Returns an array of Users objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -71,7 +71,7 @@ class AdminRepository extends ServiceEntityRepository implements PasswordUpgrade
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Admin
+//    public function findOneBySomeField($value): ?Users
 //    {
 //        return $this->createQueryBuilder('a')
 //            ->andWhere('a.exampleField = :val')
