@@ -19,6 +19,8 @@ class Carousel {
       this.prevButton = this.carousel.querySelector('.carousel__arrow--prev');
       this.nextButton = this.carousel.querySelector('.carousel__arrow--next');
       this.currentItem = 0;
+      this.scrollaxe=window.scrollX;
+     
       this.totalItems = this.items.children.length;
       this.itemWidth = this.items.offsetWidth / this.totalItems;
       this.move = this.move.bind(this);
@@ -26,12 +28,24 @@ class Carousel {
       this.prev = this.prev.bind(this);
       this.prevButton.addEventListener('click', this.prev);
       this.nextButton.addEventListener('click', this.next);
+      document.addEventListener('scroll',(event)=>{this.scrolls});
     }
   
     move() {
       this.items.style.transform = `translateX(-${this.currentItem * this.itemWidth}px)`;
     }
   
+    scrolls() { 
+      console.log(this.scrollaxe);
+      if(this.scrollaxe < (this.itemWidth % 2)){
+        this.currentItem = (this.currentItem + 1) % this.totalItems;
+        this.move();
+      }else{
+        this.currentItem = (this.currentItem - 1 + this.totalItems) % this.totalItems;
+        this.move();
+      }
+     
+    }
     next() {
       this.currentItem = (this.currentItem + 1) % this.totalItems;
       this.move();
