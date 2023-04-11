@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: lightgray;
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
+body {
+    background-color: bg-white;
+}
+.carousel {
+    position: relative;
+    overflow: hidden;
+
+
+  }
+  
+  .carousel__items {
+    display: flex;
+    padding: 5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel__item {
+    padding: 1rem;
+  }
+  
+  .carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .carousel__arrow--prev {
+    left: 1rem;
+  }
+  
+  .carousel__arrow--next {
+    right: 1rem;
+  }
+  
